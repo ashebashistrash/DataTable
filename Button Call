@@ -1,0 +1,24 @@
+<button id="pdftest">export pdf</button>
+<script>
+   jQuery(document).ready( function () {
+       jQuery('#propertyinquiriesss').DataTable({
+dom:'frt',
+buttons: ['pdfHtml5'],
+paging: false,
+columnDefs: [
+ { targets: "noSort", orderable: false },
+ { targets: "hiddenCols", visible: false},],
+language: {
+        search: "_INPUT_",
+        searchPlaceholder: "Search Inquiries...",},
+oLanguage: {
+sEmptyTable: "No Inquiries to Display",
+sZeroRecords: "No Inquiries Found",
+sInfo: "Showing _TOTAL_ inquiries",
+sInfoEmpty: "Showing _TOTAL_ inquiries",
+sInfoFiltered: "(filtered from _MAX_ total inquiries)"},
+colReorder:true,
+});
+jQuery('#pdftest').on('click',function(){table.button(0).trigger();})
+   });
+</script>
